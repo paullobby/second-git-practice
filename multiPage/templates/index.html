@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en',dir='ltr'>
+    <head>
+        <meta charset-'utf-8'>
+        <title>Home</title>
+        {% load static%}
+        <link rel='stylesheet' href="{% static 'main.css'%}">
+    </head>
+    <body>
+        <h1>This is our home page</h1>
+        <h3>All about the economy</h3>
+        <a href="{% url 'about' %}">Click here</a>
+        <form  action="{% url 'about' %}">
+          {% csrf_token %}
+            <input type="text" name="user_input">
+            <input type="submit" value="Click me">
+        </form>
+        <iframe src='https://www.economist.com/' width='1000' height='1000'></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yIlhK5FWlGU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p></p>
+    </body>
+</html>
